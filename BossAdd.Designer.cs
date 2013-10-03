@@ -2,6 +2,7 @@
 {
     partial class BossAdd
     {
+	//some change
         /// <summary>
         /// Required designer variable.
         /// </summary>
