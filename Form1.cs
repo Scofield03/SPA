@@ -283,6 +283,7 @@ namespace SPA
        // dataGridView6.Width= 894;
         //dataGridView6.Height = 413;
 
+        button2.Visible = true;
         button3.Visible = false;
         button10.Visible = false;
         button15.Visible = false;
@@ -916,7 +917,7 @@ namespace SPA
 
     private void button20_Click_1(object sender, EventArgs e)
     {
-
+        
       T.Enabled = true;
       this.Location = new Point(100, 100);
         this.Width = 1125;
@@ -930,6 +931,7 @@ namespace SPA
       //  dataGridView6.Width = 894;
      //   dataGridView6.Height = 413;
 
+        button2.Visible = false;
         button3.Visible = true;
         button10.Visible = true;
         button15.Visible = true;
@@ -1212,6 +1214,35 @@ namespace SPA
     private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
     {
 
+    }
+
+    private void button2_Click(object sender, EventArgs e)
+    {
+        if (dataGridView1.Rows.Count < 0)
+        {
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                dataGridView1.Rows.Remove(dataGridView1.Rows[0]);
+        }
+
+
+        if (comboBox6.Text == string.Empty || comboBox10.Text == string.Empty)
+        {
+            MessageBox.Show("Заполните все необходимые поля", "Внимание");
+        }
+        else
+        {
+            string time1, time2, date, pers = comboBox6.Text;
+            date = dateTimePicker2.Value.ToString("dd.MM.yyyy");
+            time1 = comboBox12.Text.ToString() + ":" + comboBox11.Text.ToString();
+            time2 = comboBox10.Text.ToString() + ":" + comboBox9.Text.ToString();
+            //MessageBox.Show(time2);
+            myDataAdapter.SelectCommand = new OleDbCommand("SELECT  Время.Специалист, Время.Дата, Время.Процедура, Время.С, Время.По FROM Время WHERE (((Время.Специалист)='" + pers + "') AND ((Время.Дата)='" + date + "') AND ((Время.С)='" + time1 + "'));", myOleDbConnection);
+            myDataAdapter.SelectCommand.Connection.Open();
+            myDataAdapter.SelectCommand.ExecuteNonQuery();
+            myDataAdapter.Fill(myDataSet, "Расписаниемоё");
+            myDataAdapter.SelectCommand.Connection.Close();
+            dataGridView1.DataSource = myDataSet.Tables["Расписаниемоё"].DefaultView;
+        }
     }
 
   }

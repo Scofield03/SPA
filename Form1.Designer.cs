@@ -123,6 +123,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -160,6 +161,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.button20);
             this.tabPage1.Controls.Add(this.label24);
             this.tabPage1.Controls.Add(this.button19);
@@ -202,6 +204,7 @@
             // 
             // button20
             // 
+            this.button20.BackColor = System.Drawing.Color.Transparent;
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button20.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button20.Image = global::SPA.Properties.Resources._1380130947_MB__home1;
@@ -209,7 +212,7 @@
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(100, 100);
             this.button20.TabIndex = 89;
-            this.button20.UseVisualStyleBackColor = true;
+            this.button20.UseVisualStyleBackColor = false;
             this.button20.Visible = false;
             this.button20.Click += new System.EventHandler(this.button20_Click_1);
             // 
@@ -493,7 +496,7 @@
             this.groupBox2.Controls.Add(this.textBox3);
             this.groupBox2.Controls.Add(this.textBox10);
             this.groupBox2.Controls.Add(this.textBox11);
-            this.groupBox2.Location = new System.Drawing.Point(3, 231);
+            this.groupBox2.Location = new System.Drawing.Point(6, 250);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(433, 321);
             this.groupBox2.TabIndex = 86;
@@ -1303,12 +1306,23 @@
             this.trackBar1.Location = new System.Drawing.Point(810, 2);
             this.trackBar1.Maximum = 100;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(132, 45);
+            this.trackBar1.Size = new System.Drawing.Size(132, 42);
             this.trackBar1.TabIndex = 29;
             this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.None;
             this.toolTip1.SetToolTip(this.trackBar1, "регулирует прозрачность окна");
             this.trackBar1.Value = 100;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button2.Location = new System.Drawing.Point(3, 231);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(433, 23);
+            this.button2.TabIndex = 59;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
@@ -1449,6 +1463,7 @@
     private System.Windows.Forms.ComboBox comboBox12;
     private System.Windows.Forms.Label label29;
     private System.Windows.Forms.Label label30;
+    private System.Windows.Forms.Button button2;
 
 
   }
