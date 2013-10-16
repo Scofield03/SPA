@@ -30,7 +30,7 @@ namespace SPA
     BossAdd BossAdd;
     AddCl AddCl;
     System.Windows.Forms.Timer T = new System.Windows.Forms.Timer();
-
+    bool SPA_1 = false;
     public OleDbConnection obj_connect = null;
     string connectionString;
     double qw = 60;
@@ -126,7 +126,7 @@ namespace SPA
       myDataAdapter.SelectCommand.ExecuteNonQuery();
       myDataAdapter.Fill(myDataSet, "Расписание3");
 
-      myDataAdapter.SelectCommand = new OleDbCommand("SELECT * FROM Расписание", myOleDbConnection);
+      myDataAdapter.SelectCommand = new OleDbCommand("SELECT Расписание.Дата, Клиенты.Фамилия, Процедуры.Название, Персонал.Фамилия, Расписание.С, Расписание.По FROM Персонал, Процедуры INNER JOIN (Клиенты INNER JOIN Расписание ON Клиенты.Полис = Расписание.Клиент) ON Процедуры.ID_Процедуры = Расписание.Процедура WHERE (((Персонал.ID_Персонала)=[Расписание].[Специалист]));", myOleDbConnection);//SELECT * FROM Расписание
       myDataAdapter.SelectCommand.ExecuteNonQuery();
       myDataAdapter.Fill(myDataSet, "Расписание31");
 
@@ -147,7 +147,7 @@ namespace SPA
       this.dataGridView4.DataSource = myDataSet.Tables["Расписание"].DefaultView;
 
       this.dataGridView1.Columns["ID_Персонала"].Visible = false;
-      this.dataGridView3.Columns["ID_расписания"].Visible = false;
+      //this.dataGridView3.Columns["ID_расписания"].Visible = false;
 
      this.dataGridView4.Columns["ID_расписания"].Visible = false;
       this.dataGridView5.Columns["ID_расписания"].Visible = false;
@@ -328,9 +328,9 @@ namespace SPA
 
        // myOleDbConnection = new OleDbConnection(connectionString);
         // myDataAdapter = new System.Data.OleDb.OleDbDataAdapter("SELECT * FROM Время WHERE (flag=True)", myOleDbConnection);
-        myDataAdapter = new System.Data.OleDb.OleDbDataAdapter("SELECT * FROM Время", myOleDbConnection);
-        myDataSet = new DataSet("Время12");
-        myDataAdapter.Fill(myDataSet, "Время12");
+        myDataAdapter = new System.Data.OleDb.OleDbDataAdapter("SELECT * FROM Расписание", myOleDbConnection);
+        myDataSet = new DataSet("Расписание12");
+        myDataAdapter.Fill(myDataSet, "Расписание12");
         myDataAdapter.SelectCommand.Connection.Close();
 
         myDataAdapter.SelectCommand = new OleDbCommand("SELECT * FROM Клиенты", myOleDbConnection);
@@ -366,7 +366,7 @@ namespace SPA
         myDataAdapter.SelectCommand.Connection.Close();
 
         this.dataGridView6.DataSource = myDataSet.Tables["Клиенты"].DefaultView;
-        this.dataGridView1.DataSource = myDataSet.Tables["Время12"].DefaultView;
+        this.dataGridView1.DataSource = myDataSet.Tables["Расписание12"].DefaultView;
 
         //this.dataGridView1.Columns["ID_расписания"].Visible = false;
         //this.dataGridView1.Columns["Клиент"].Visible = false;
@@ -623,12 +623,13 @@ namespace SPA
             cmd = "SELECT Полис FROM Клиенты WHERE (Фамилия = '" + comboBox3.Text + "')";
             OleDbCommand cmd1 = new OleDbCommand(cmd, myConn);
             fio = cmd1.ExecuteScalar().ToString();
-           // MessageBox.Show(fio);
+            MessageBox.Show(fio);
         }
         myConn.Close();
         //try
         // {
-        this.dataGridView3.DataSource = myDataSet.Tables["Расписание31"].DefaultView;
+
+      // this.dataGridView3.DataSource = myDataSet.Tables["Расписание31"].DefaultView;
         // this.dataGridView3.Columns["ID_расписания"].Visible = false;
         myDataSet.Tables["Расписание31"].Clear();
         if (comboBox1.SelectedIndex != -1 || comboBox1.Text != string.Empty)
@@ -710,12 +711,15 @@ namespace SPA
             }
         }
 
+
+
+
         myDataAdapter.SelectCommand = new OleDbCommand(cmd, myOleDbConnection);
         myDataAdapter.SelectCommand.Connection.Open();
         myDataAdapter.SelectCommand.ExecuteNonQuery();
         myDataAdapter.Fill(myDataSet, "Расписание31");
         myDataAdapter.SelectCommand.Connection.Close();
-        // }
+         
         /* catch (Exception ex)
          {
              MessageBox.Show(ex.Message);
@@ -751,6 +755,7 @@ namespace SPA
         {
             comboBox6.DataSource = myDataSet.Tables["NonSPA_Персонал"].DefaultView;
             comboBox6.DisplayMember = "Фамилия";
+            SPA_1 = false;
         }
        /* else
         {
@@ -767,6 +772,7 @@ namespace SPA
     {
         if (radioButton2.Checked == true)
         {
+            SPA_1 = true;
             comboBox6.DataSource = myDataSet.Tables["SPA_Персонал"].DefaultView;
             comboBox6.DisplayMember = "Фамилия";
             
@@ -854,77 +860,58 @@ namespace SPA
 
     private void button19_Click_1(object sender, EventArgs e)
     {
-     int ID_PROC=0;
-     int ID_PERS=0;
-        try
-        {
+     int ID_PROC=0;// ID_Процедуры
+     int ID_PERS=0;//ID_Специалиста
 
-        //   // if (dataGridView1.SelectedRows.Count != 1)
-        //   //     MessageBox.Show("Выберите свободное время в таблице!", "ОШИБКА!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //   // else
-        ////    {
+     string cc = "SELECT Персонал.ID_Персонала FROM Персонал WHERE (((Персонал.Фамилия)='" + comboBox6.Text + "'));";
+     OleDbConnection myConn = new OleDbConnection(connectionString);
+     myConn.Open();
+     OleDbCommand cmd1 = new OleDbCommand(cc, myConn);
+     ID_PERS = Convert.ToInt32(cmd1.ExecuteScalar());
 
+     if (!SPA_1)
+     {
+         
+         cc = "SELECT Процедуры.ID_Процедуры FROM Процедуры WHERE (((Процедуры.Название)='" + comboBox5.Text + "'));";
 
-
-        // //SqlConnection obj_connect1 = new SqlConnection("Data Source=(spa.mdb)");
-        try
-         {
-
-          string comand = "SELECT  ID_Процедуры FROM Процедуры WHERE (((Название='" + comboBox5.Text + "')))";
-          obj_connect = new OleDbConnection(connectionString);
-          OleDbCommand com = new OleDbCommand(comand, obj_connect);
-          obj_connect.Open();
-         // com.ExecuteNonQuery();
-          ID_PROC = (int)com.ExecuteScalar(); //reader.GetInt32(0); 
-       //   obj_connect.Close();
-
-
-          comand = "SELECT  ID_Персонала FROM Персонал WHERE (((Фамилия='" + comboBox6.Text + "')))";
-         // obj_connect = new OleDbConnection(connectionString);
-          OleDbCommand com1 = new OleDbCommand(comand, obj_connect);
-          ///com.ExecuteNonQuery();
-          ID_PERS = (int)com1.ExecuteScalar();
-          obj_connect.Close();
-         }
-       catch (Exception ex)
-         {
-          MessageBox.Show(ex.Message);
-          obj_connect = null;
-         }
+         cmd1 = new OleDbCommand(cc, myConn);
+         ID_PROC = Convert.ToInt32(cmd1.ExecuteScalar());
+         myConn.Close();
+     }
+     else
+     {
+         
+         cc = "SELECT spa_процедуры.ID FROM spa_процедуры WHERE (((spa_процедуры.Название)='" + comboBox7.Text + "'));";
+         cmd1 = new OleDbCommand(cc, myConn);
+         ID_PROC = Convert.ToInt32(cmd1.ExecuteScalar());
+         myConn.Close();
+     }
         
 
                
-         string cmd = "INSERT INTO Расписание (Клиент, Процедура, Специалист,С,По,Дата)  VALUES (" + Convert.ToInt32(comboBox8.Text) + "," + ID_PROC + "," + ID_PERS + ",'" + comboBox12.SelectedItem.ToString() + ":" + comboBox11.SelectedItem.ToString() + "','" + comboBox10.SelectedItem.ToString() + ":" + comboBox9.SelectedItem.ToString() + "','"+dateTimePicker2.Value.ToShortDateString()+"')";
-        // myDataAdapter.InsertCommand.Connection.Close();
-         myDataAdapter.InsertCommand = new OleDbCommand(cmd, myOleDbConnection);                
-                myDataAdapter.InsertCommand.Connection.Open();
-                MessageBox.Show(myDataAdapter.InsertCommand.CommandText);
-                myDataAdapter.InsertCommand.ExecuteNonQuery();                
-                myDataAdapter.InsertCommand.Connection.Close();
+    string cmd = "INSERT INTO Расписание (Клиент, Процедура, Специалист,С,По,Дата)  VALUES (" + Convert.ToInt32(comboBox8.Text) + "," + ID_PROC + "," + ID_PERS + ",'" + comboBox12.SelectedItem.ToString() + ":" + comboBox11.SelectedItem.ToString() + "','" + comboBox10.SelectedItem.ToString() + ":" + comboBox9.SelectedItem.ToString() + "','"+dateTimePicker2.Value.ToShortDateString()+"')";
+    // myDataAdapter.InsertCommand.Connection.Close();
+    myDataAdapter.InsertCommand = new OleDbCommand(cmd, myOleDbConnection);                
+    myDataAdapter.InsertCommand.Connection.Open();
+    MessageBox.Show(myDataAdapter.InsertCommand.CommandText);
+    myDataAdapter.InsertCommand.ExecuteNonQuery();                
+    myDataAdapter.InsertCommand.Connection.Close();
 
-                myDataSet.Tables["Расписание12"].Clear();
-                myDataSet.Tables["Расписание12"].Clear();
-                myDataAdapter.SelectCommand = new OleDbCommand("SELECT * From Расписание ", myOleDbConnection);
-                myDataAdapter.SelectCommand.Connection.Open();
-                myDataAdapter.SelectCommand.ExecuteNonQuery();
-                myDataAdapter.Fill(myDataSet, "Расписание12");
-                myDataAdapter.SelectCommand.Connection.Close();
-                //cmd = "UPDATE Время SET flag = True WHERE (Дата='" + dataGridView1.SelectedRows[0].Cells[5].Value.ToString() + "')";
-                //myDataAdapter.UpdateCommand = new OleDbCommand(cmd, myOleDbConnection);
-                //myDataAdapter.UpdateCommand.Connection.Open();
-                //myDataAdapter.UpdateCommand.ExecuteNonQuery();
-                //MessageBox.Show(myDataAdapter.UpdateCommand.CommandText);
-                //myDataAdapter.UpdateCommand.Connection.Close();
+    
+    myDataSet.Tables["Расписание12"].Clear();
+    myDataAdapter.SelectCommand = new OleDbCommand("SELECT * From Расписание ", myOleDbConnection);
+    myDataAdapter.SelectCommand.Connection.Open();
+    myDataAdapter.SelectCommand.ExecuteNonQuery();
+    myDataAdapter.Fill(myDataSet, "Расписание12");
+    myDataAdapter.SelectCommand.Connection.Close();
 
-
-            }
-      // }
-        catch (Exception ex)
-        {
-
-            MessageBox.Show(ex.Message);
-
-        }
+    cmd = "INSERT INTO Время ( Специалист,Дата, Процедура, С, По ) Values('" + comboBox6.Text + "','" + dateTimePicker2.Value.ToShortDateString() + "','" + comboBox5.Text + "','" + comboBox12.SelectedItem.ToString() + ":" + comboBox11.SelectedItem.ToString() + "','" + comboBox10.SelectedItem.ToString() + ":" + comboBox9.SelectedItem.ToString() + "')";
+    myDataAdapter.UpdateCommand = new OleDbCommand(cmd, myOleDbConnection);
+    myDataAdapter.UpdateCommand.Connection.Open();
+    myDataAdapter.UpdateCommand.ExecuteNonQuery();
+    MessageBox.Show(myDataAdapter.UpdateCommand.CommandText);
+    myDataAdapter.UpdateCommand.Connection.Close();
+        
     }
 
     private void button20_Click_1(object sender, EventArgs e)
@@ -983,7 +970,7 @@ namespace SPA
         label11.Visible = false;
 
         myOleDbConnection = new OleDbConnection(connectionString);
-        myDataAdapter = new System.Data.OleDb.OleDbDataAdapter("SELECT * FROM Время WHERE (flag=True)", myOleDbConnection);
+        myDataAdapter = new System.Data.OleDb.OleDbDataAdapter("SELECT * FROM Время ", myOleDbConnection);
         myDataSet = new DataSet("Время");
         myDataAdapter.Fill(myDataSet, "Время");
         myDataAdapter.SelectCommand.Connection.Close();
@@ -1111,7 +1098,7 @@ namespace SPA
          if (radioButton1.Checked == true)
              com = "SELECT Продолжительность FROM Процедуры WHERE (Название = '" + comboBox5.Text + "')";
          if (radioButton2.Checked == true)
-             com = "SELECT Продолжительность FROM spa-процедуры WHERE (Название = '" + comboBox7.Text + "')";
+             com = "SELECT Продолжительность FROM spa_процедуры WHERE (Название = '" + comboBox7.Text + "')";
          OleDbCommand cmd = new OleDbCommand(com, myConn);
          Mytime = cmd.ExecuteScalar().ToString();
          int newTime = Convert.ToInt32(Mytime);

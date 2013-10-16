@@ -28,6 +28,7 @@ namespace SPA
         DataSet myDataSet;
         public OleDbConnection obj_connect = null;
         string connectionString;
+        bool SPA_ = false;
         public BossAdd()
         {
             InitializeComponent();
@@ -173,7 +174,6 @@ namespace SPA
             try
             {
                 myDataAdapter.InsertCommand = new OleDbCommand(cmd, myOleDbConnection);
-
                 myDataAdapter.InsertCommand.Connection.Open();
                 myDataAdapter.InsertCommand.ExecuteNonQuery();
                 myDataAdapter.InsertCommand.Connection.Close();
