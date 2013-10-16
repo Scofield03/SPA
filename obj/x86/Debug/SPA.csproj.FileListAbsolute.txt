@@ -187,3 +187,131 @@ C:\Users\Сева\Desktop\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Properties.
 C:\Users\Сева\Desktop\курсач_old\SPA\SPA\obj\x86\Debug\SPA.csproj.GenerateResource.Cache
 C:\Users\Сева\Desktop\курсач_old\SPA\SPA\obj\x86\Debug\SPA.exe.manifest
 C:\Users\Сева\Desktop\курсач_old\SPA\SPA\obj\x86\Debug\SPA.application
+C:\Users\Сева\Desktop\курсак\курсач_old\SPA\SPA\bin\Debug\SPA.exe.config
+C:\Users\Сева\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.exe
+C:\Users\Сева\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.pdb
+C:\Users\Сева\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.AddCl.resources
+C:\Users\Сева\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.AddTime.resources
+C:\Users\Сева\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.AddLenTime.resources
+C:\Users\Сева\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.BossAdd.resources
+C:\Users\Сева\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Form1.resources
+C:\Users\Сева\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Login.resources
+C:\Users\Сева\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Login2.resources
+C:\Users\Сева\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Properties.Resources.resources
+C:\Users\Сева\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Properties.Resources1.resources
+C:\Users\Сева\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.csproj.GenerateResource.Cache
+C:\Users\Сева\Desktop\курсак\курсач_old\SPA\SPA\bin\Debug\spa.mdb
+C:\Users\Сева\Desktop\курсак\курсач_old\SPA\SPA\bin\Debug\SPA.exe.manifest
+C:\Users\Сева\Desktop\курсак\курсач_old\SPA\SPA\bin\Debug\SPA.application
+C:\Users\Сева\Desktop\курсак\курсач_old\SPA\SPA\bin\Debug\SPA.exe
+C:\Users\Сева\Desktop\курсак\курсач_old\SPA\SPA\bin\Debug\SPA.pdb
+C:\Users\Сева\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.exe.manifest
+C:\Users\Сева\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.application
+C:\Users\Мариша\Desktop\курсак\курсач_old\SPA\SPA\bin\Debug\SPA.exe.config
+C:\Users\Мариша\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.exe
+C:\Users\Мариша\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.pdb
+C:\Users\Мариша\Desktop\курсак\курсач_old\SPA\SPA\bin\Debug\spa.mdb
+C:\Users\Мариша\Desktop\курсак\курсач_old\SPA\SPA\bin\Debug\SPA.exe.manifest
+C:\Users\Мариша\Desktop\курсак\курсач_old\SPA\SPA\bin\Debug\SPA.application
+C:\Users\Мариша\Desktop\курсак\курсач_old\SPA\SPA\bin\Debug\SPA.exe
+C:\Users\Мариша\Desktop\курсак\курсач_old\SPA\SPA\bin\Debug\SPA.pdb
+C:\Users\Мариша\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.AddCl.resources
+C:\Users\Мариша\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.AddTime.resources
+C:\Users\Мариша\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.AddLenTime.resources
+C:\Users\Мариша\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.BossAdd.resources
+C:\Users\Мариша\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Form1.resources
+C:\Users\Мариша\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Login.resources
+C:\Users\Мариша\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Login2.resources
+C:\Users\Мариша\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Properties.Resources.resources
+C:\Users\Мариша\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Properties.Resources1.resources
+C:\Users\Мариша\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.csproj.GenerateResource.Cache
+C:\Users\Мариша\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.exe.manifest
+C:\Users\Мариша\Desktop\курсак\курсач_old\SPA\SPA\obj\x86\Debug\SPA.application
+C:\Users\Oracle13\Desktop\курсак 16.10\курсач_old\SPA\SPA\bin\Debug\SPA.exe.config
+C:\Users\Oracle13\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.exe
+C:\Users\Oracle13\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.pdb
+C:\Users\Oracle13\Desktop\курсак 16.10\курсач_old\SPA\SPA\bin\Debug\spa.mdb
+C:\Users\Oracle13\Desktop\курсак 16.10\курсач_old\SPA\SPA\bin\Debug\SPA.exe.manifest
+C:\Users\Oracle13\Desktop\курсак 16.10\курсач_old\SPA\SPA\bin\Debug\SPA.application
+C:\Users\Oracle13\Desktop\курсак 16.10\курсач_old\SPA\SPA\bin\Debug\SPA.exe
+C:\Users\Oracle13\Desktop\курсак 16.10\курсач_old\SPA\SPA\bin\Debug\SPA.pdb
+C:\Users\Oracle13\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Oracle13\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.AddCl.resources
+C:\Users\Oracle13\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.AddTime.resources
+C:\Users\Oracle13\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.AddLenTime.resources
+C:\Users\Oracle13\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.BossAdd.resources
+C:\Users\Oracle13\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Form1.resources
+C:\Users\Oracle13\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Login.resources
+C:\Users\Oracle13\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Login2.resources
+C:\Users\Oracle13\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Properties.Resources.resources
+C:\Users\Oracle13\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Properties.Resources1.resources
+C:\Users\Oracle13\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Oracle13\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Oracle13\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.exe.manifest
+C:\Users\Oracle13\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.application
+C:\Users\student\Desktop\курсак 16.10\курсач_old\SPA\SPA\bin\Debug\SPA.exe.config
+C:\Users\student\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.exe
+C:\Users\student\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.pdb
+C:\Users\student\Desktop\курсак 16.10\курсач_old\SPA\SPA\bin\Debug\spa.mdb
+C:\Users\student\Desktop\курсак 16.10\курсач_old\SPA\SPA\bin\Debug\SPA.exe.manifest
+C:\Users\student\Desktop\курсак 16.10\курсач_old\SPA\SPA\bin\Debug\SPA.application
+C:\Users\student\Desktop\курсак 16.10\курсач_old\SPA\SPA\bin\Debug\SPA.exe
+C:\Users\student\Desktop\курсак 16.10\курсач_old\SPA\SPA\bin\Debug\SPA.pdb
+C:\Users\student\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\student\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.AddCl.resources
+C:\Users\student\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.AddTime.resources
+C:\Users\student\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.AddLenTime.resources
+C:\Users\student\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.BossAdd.resources
+C:\Users\student\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Form1.resources
+C:\Users\student\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Login.resources
+C:\Users\student\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Login2.resources
+C:\Users\student\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Properties.Resources.resources
+C:\Users\student\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Properties.Resources1.resources
+C:\Users\student\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\student\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\student\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.exe.manifest
+C:\Users\student\Desktop\курсак 16.10\курсач_old\SPA\SPA\obj\x86\Debug\SPA.application
+C:\Users\student\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\bin\Debug\SPA.exe.config
+C:\Users\student\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.exe
+C:\Users\student\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.pdb
+C:\Users\student\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\bin\Debug\spa.mdb
+C:\Users\student\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\bin\Debug\SPA.exe.manifest
+C:\Users\student\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\bin\Debug\SPA.application
+C:\Users\student\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\bin\Debug\SPA.exe
+C:\Users\student\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\bin\Debug\SPA.pdb
+C:\Users\student\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\student\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.AddCl.resources
+C:\Users\student\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.AddTime.resources
+C:\Users\student\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.AddLenTime.resources
+C:\Users\student\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.BossAdd.resources
+C:\Users\student\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Form1.resources
+C:\Users\student\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Login.resources
+C:\Users\student\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Login2.resources
+C:\Users\student\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Properties.Resources.resources
+C:\Users\student\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Properties.Resources1.resources
+C:\Users\student\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\student\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\student\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.exe.manifest
+C:\Users\student\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.application
+C:\Users\Oracle13\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\bin\Debug\SPA.exe.config
+C:\Users\Oracle13\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.exe
+C:\Users\Oracle13\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.pdb
+C:\Users\Oracle13\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Oracle13\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.AddCl.resources
+C:\Users\Oracle13\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.AddTime.resources
+C:\Users\Oracle13\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.AddLenTime.resources
+C:\Users\Oracle13\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.BossAdd.resources
+C:\Users\Oracle13\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Form1.resources
+C:\Users\Oracle13\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Login.resources
+C:\Users\Oracle13\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Login2.resources
+C:\Users\Oracle13\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Properties.Resources.resources
+C:\Users\Oracle13\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.Properties.Resources1.resources
+C:\Users\Oracle13\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Oracle13\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Oracle13\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\bin\Debug\spa.mdb
+C:\Users\Oracle13\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\bin\Debug\SPA.exe.manifest
+C:\Users\Oracle13\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\bin\Debug\SPA.application
+C:\Users\Oracle13\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\bin\Debug\SPA.exe
+C:\Users\Oracle13\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\bin\Debug\SPA.pdb
+C:\Users\Oracle13\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.exe.manifest
+C:\Users\Oracle13\Desktop\курсак 16.10 интерфейс\курсач_old\SPA\SPA\obj\x86\Debug\SPA.application

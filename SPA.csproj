@@ -252,6 +252,7 @@
     <None Include="Resources\1380158582_MB__navigation11.png" />
     <None Include="Resources\1380158582_MB__navigation111.png" />
     <None Include="Resources\1380158582_MB__navigation112.png" />
+    <None Include="Resources\1381700109_Personal.png" />
     <Content Include="spa.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

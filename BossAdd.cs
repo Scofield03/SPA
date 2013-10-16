@@ -16,11 +16,11 @@ namespace SPA
 {
     public partial class BossAdd : Form
     {
-      string s=" ";
-      bool a;
-     
-     
-      List<string> list = new List<string>();
+        string s = " ";
+        bool a;
+
+
+        List<string> list = new List<string>();
 
 
         OleDbConnection myOleDbConnection;
@@ -31,7 +31,7 @@ namespace SPA
         public BossAdd()
         {
             InitializeComponent();
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -63,35 +63,30 @@ namespace SPA
         }
 
         private void BossAdd_Load(object sender, EventArgs e)
-
         {
-          
-          ToolTip t = new ToolTip();
-          t.SetToolTip(this.button2, "Выйти");
-          t.SetToolTip(this.button4, "Выйти");
-          t.SetToolTip(this.button6, "Выйти");
-          t.SetToolTip(this.button13, "Выйти");
 
-          t.SetToolTip(this.button15, "Раскрыть список");
-          t.SetToolTip(this.button18, "Свернуть список");
+            ToolTip t = new ToolTip();
 
-          t.SetToolTip(this.button1, "Добавить специалиста");
-          t.SetToolTip(this.button7, "Удалить специалиста");
+            t.SetToolTip(this.button15, "Раскрыть список");
+            t.SetToolTip(this.button18, "Свернуть список");
 
-          t.SetToolTip(this.button3, "Добавить специальность");
-          t.SetToolTip(this.button8, "Удалить специальность");
+            t.SetToolTip(this.button1, "Добавить специалиста");
+            t.SetToolTip(this.button7, "Удалить специалиста");
 
-          t.SetToolTip(this.button5, "Добавить процедуру");
-          t.SetToolTip(this.button9, "Удалить процедуру");
-          t.SetToolTip(this.button10, "Добавить описание к процедуре");
+            t.SetToolTip(this.button3, "Добавить специальность");
+            t.SetToolTip(this.button8, "Удалить специальность");
+
+            t.SetToolTip(this.button5, "Добавить процедуру");
+            t.SetToolTip(this.button9, "Удалить процедуру");
+            t.SetToolTip(this.button10, "Добавить описание к процедуре");
 
 
-          t.SetToolTip(this.button14, "Добавить Spa программу");
-          t.SetToolTip(this.button12, "Удалить Spa программу");
-          
-      
+            t.SetToolTip(this.button14, "Добавить Spa программу");
+            t.SetToolTip(this.button12, "Удалить Spa программу");
+
+
             connectionString = "provider=Microsoft.Jet.OLEDB.4.0;" + "data source=spa.mdb";
-            
+
             myOleDbConnection = new OleDbConnection(connectionString);
 
             myOleDbConnection = new OleDbConnection(connectionString);
@@ -127,6 +122,14 @@ namespace SPA
             myDataAdapter.SelectCommand.ExecuteNonQuery();
             myDataAdapter.Fill(myDataSet, "spa_процедуры");
 
+            myDataAdapter.SelectCommand = new OleDbCommand("SELECT * FROM Персонал WHERE (Специальность = 'СПА-мастер')", myOleDbConnection);
+            myDataAdapter.SelectCommand.ExecuteNonQuery();
+            myDataAdapter.Fill(myDataSet, "SPA_Персонал");
+
+            myDataAdapter.SelectCommand = new OleDbCommand("SELECT * FROM Специальности WHERE (Not Название='СПА-мастер')", myOleDbConnection);
+            myDataAdapter.SelectCommand.ExecuteNonQuery();
+            myDataAdapter.Fill(myDataSet, "NonSPA_Специальности");
+
 
             myDataAdapter.SelectCommand.Connection.Close();
 
@@ -135,24 +138,38 @@ namespace SPA
             this.dataGridView2.DataSource = myDataSet.Tables["Процедуры"].DefaultView;
             this.dataGridView4.DataSource = myDataSet.Tables["spa_процедуры"].DefaultView;
 
+            this.dataGridView1.Columns["ID_Специальности"].Visible = false;
+            this.dataGridView2.Columns["ID_Процедуры"].Visible = false;
+            this.dataGridView2.Columns["ID_Специальности"].Visible = false;
+            this.dataGridView2.Columns["Описание"].Visible = false;
             this.dataGridView3.Columns["ID_Персонала"].Visible = false;
             this.dataGridView4.Columns["ID"].Visible = false;
+            this.dataGridView4.Columns["ID_Персонала"].Visible = false;
 
             comboBox1.DataSource = myDataSet.Tables["Специальности"].DefaultView;
             comboBox1.DisplayMember = "Название";
 
+            comboBox2.DataSource = myDataSet.Tables["SPA_Персонал"].DefaultView;
+            comboBox2.DisplayMember = "Фамилия";
+
+            comboBox3.DataSource = myDataSet.Tables["NonSPA_Специальности"].DefaultView;
+            comboBox3.DisplayMember = "Название";
+
+
             checkedListBox1.DataSource = myDataSet.Tables["Процедуры"].DefaultView;
             checkedListBox1.DisplayMember = "Название";
+
+
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string cmd = "INSERT INTO Специальности  VALUES ('" + textBox4.Text + "')";
+            string cmd = "INSERT INTO Специальности (Название)  VALUES ('" + textBox4.Text + "')";
             try
             {
                 myDataAdapter.InsertCommand = new OleDbCommand(cmd, myOleDbConnection);
@@ -204,7 +221,7 @@ namespace SPA
         private void button8_Click(object sender, EventArgs e)
         {
 
-            myDataAdapter.DeleteCommand = new OleDbCommand("DELETE FROM Специальности WHERE Название='" + dataGridView1.SelectedRows[0].Cells[0].Value + "'", myOleDbConnection);
+            myDataAdapter.DeleteCommand = new OleDbCommand("DELETE FROM Специальности WHERE Название ='" + dataGridView1.SelectedRows[0].Cells[0].Value + "'", myOleDbConnection);
             try
             {
                 myDataAdapter.DeleteCommand.Connection.Open();
@@ -229,7 +246,15 @@ namespace SPA
 
         private void button5_Click(object sender, EventArgs e)
         {
-            string cmd = "INSERT INTO Процедуры (Название)  VALUES ('" + textBox5.Text + "')";
+            int a = 0;
+            string cc = "SELECT Специальности.ID_Специальности FROM Специальности WHERE (((Специальности.Название)='" + comboBox3.Text + "'));";
+            OleDbConnection myConn = new OleDbConnection(connectionString);
+            myConn.Open();
+            OleDbCommand cmd1 = new OleDbCommand(cc, myConn);
+            a = Convert.ToInt32(cmd1.ExecuteScalar());
+
+
+            string cmd = "INSERT INTO Процедуры (Название,Продолжительность,ID_Специальности)  VALUES ('" + textBox5.Text + "'," + textBox9.Text + "," + a + ")";
             try
             {
                 myDataAdapter.InsertCommand = new OleDbCommand(cmd, myOleDbConnection);
@@ -256,7 +281,7 @@ namespace SPA
 
         private void button9_Click(object sender, EventArgs e)
         {
-            myDataAdapter.DeleteCommand = new OleDbCommand("DELETE FROM Процедуры WHERE Название='" + dataGridView2.SelectedRows[0].Cells[0].Value + "'", myOleDbConnection);
+            myDataAdapter.DeleteCommand = new OleDbCommand("DELETE FROM Процедуры WHERE ID_Процедуры=" + dataGridView2.SelectedRows[0].Cells[0].Value + "", myOleDbConnection);
             try
             {
                 myDataAdapter.DeleteCommand.Connection.Open();
@@ -280,33 +305,42 @@ namespace SPA
 
         private void button10_Click(object sender, EventArgs e)
         {
-            myDataAdapter.UpdateCommand = new OleDbCommand("UPDATE Процедуры SET [Описание] = '" + textBox6.Text + "' WHERE [Название] ='" + dataGridView2.SelectedRows[0].Cells[0].Value + "'", myOleDbConnection);
-            try
-            {
-                myDataAdapter.UpdateCommand.Connection.Open();
-                myDataAdapter.UpdateCommand.ExecuteNonQuery();
-                myDataAdapter.UpdateCommand.Connection.Close();
-                textBox6.Clear();
+            //myDataAdapter.UpdateCommand = new OleDbCommand("UPDATE Процедуры SET [Описание] = '" + textBox6.Text + "' WHERE [Название] ='" + dataGridView2.SelectedRows[0].Cells[0].Value + "'", myOleDbConnection);
+            //try
+            //{
+            //    myDataAdapter.UpdateCommand.Connection.Open();
+            //    myDataAdapter.UpdateCommand.ExecuteNonQuery();
+            //    myDataAdapter.UpdateCommand.Connection.Close();
+            //    textBox6.Clear();
 
-                myDataAdapter.SelectCommand = new OleDbCommand("Select * FROM Процедуры", myOleDbConnection);
-                myDataAdapter.SelectCommand.Connection.Open();
-                myDataAdapter.SelectCommand.ExecuteNonQuery();
-                myDataAdapter.SelectCommand.Connection.Close();
+            //    myDataAdapter.SelectCommand = new OleDbCommand("Select * FROM Процедуры", myOleDbConnection);
+            //    myDataAdapter.SelectCommand.Connection.Open();
+            //    myDataAdapter.SelectCommand.ExecuteNonQuery();
+            //    myDataAdapter.SelectCommand.Connection.Close();
 
-                myDataSet.Tables["Процедуры"].Clear();
-                myDataAdapter.Fill(myDataSet, "Процедуры");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                obj_connect = null;
-            }
+            //    myDataSet.Tables["Процедуры"].Clear();
+            //    myDataAdapter.Fill(myDataSet, "Процедуры");
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //    obj_connect = null;
+            //}
         }
 
 
         private void button14_Click(object sender, EventArgs e)
         {
-          //if (checkedListBox1
+
+            int a = 0;
+            string cc = "SELECT Персонал.ID_Персонала FROM Персонал WHERE (((Персонал.Фамилия)='" + comboBox2.Text + "'));";
+            OleDbConnection myConn = new OleDbConnection(connectionString);
+            myConn.Open();
+            OleDbCommand cmd1 = new OleDbCommand(cc, myConn);
+            a = Convert.ToInt32(cmd1.ExecuteScalar());
+
+
+
             checkedListBox1.ClearSelected();
             checkedListBox1.Height = 20;
             int i = 0;
@@ -315,64 +349,64 @@ namespace SPA
                 checkedListBox1.SetItemChecked(i, false);
             }
 
-          
-          checkedListBox1.Height = 20;
-          List<string> uniqueList = new List<string>(list.Distinct());         
-          int k = 0;
-          foreach (var item in uniqueList)
-          {
-             s += uniqueList[k];      
-            k++;        
-          }            
-          i = 0;
 
-          uniqueList.Remove(" <> ");
-               
-          list.Clear();
-         
+            checkedListBox1.Height = 20;
+            List<string> uniqueList = new List<string>(list.Distinct());
+            int k = 0;
+            foreach (var item in uniqueList)
+            {
+                s += uniqueList[k];
+                k++;
+            }
+            i = 0;
 
-          string cmd = "INSERT INTO spa_процедуры (Название,Описание)  VALUES ('" + textBox8.Text + "','" + s + "')";
-          //string cmd = String.Format("INSERT INTO spa_процедуры (Описание)  VALUES ('{0}')", s);
-          try
-          {
-            myDataAdapter.InsertCommand = new OleDbCommand(cmd, myOleDbConnection);
+            uniqueList.Remove(" <> ");
 
-            myDataAdapter.InsertCommand.Connection.Open();
-            myDataAdapter.InsertCommand.ExecuteNonQuery();
-            myDataAdapter.InsertCommand.Connection.Close();
+            list.Clear();
 
-            myDataAdapter.SelectCommand = new OleDbCommand("Select * FROM spa_процедуры", myOleDbConnection);
-            myDataAdapter.SelectCommand.Connection.Open();
-            myDataAdapter.SelectCommand.ExecuteNonQuery();
-            myDataAdapter.SelectCommand.Connection.Close();
-            textBox5.Clear();
 
-            myDataSet.Tables["spa_процедуры"].Clear();
-            myDataAdapter.Fill(myDataSet, "spa_процедуры");
-            s = null;
+            string cmd = "INSERT INTO spa_процедуры (Название,Описание,Продолжительность,ID_Персонала)  VALUES ('" + textBox8.Text + "','" + s + "'," + textBox7.Text + "," + a + ")";
+            //string cmd = String.Format("INSERT INTO spa_процедуры (Описание)  VALUES ('{0}')", s);
+            try
+            {
+                myDataAdapter.InsertCommand = new OleDbCommand(cmd, myOleDbConnection);
 
-          }
-          catch (Exception ex)
-          {
-            MessageBox.Show(ex.Message);
-            obj_connect = null;
-          }
-         
-          checkedListBox1.ClearSelected();
-          
+                myDataAdapter.InsertCommand.Connection.Open();
+                myDataAdapter.InsertCommand.ExecuteNonQuery();
+                myDataAdapter.InsertCommand.Connection.Close();
+
+                myDataAdapter.SelectCommand = new OleDbCommand("Select * FROM spa_процедуры", myOleDbConnection);
+                myDataAdapter.SelectCommand.Connection.Open();
+                myDataAdapter.SelectCommand.ExecuteNonQuery();
+                myDataAdapter.SelectCommand.Connection.Close();
+                textBox5.Clear();
+
+                myDataSet.Tables["spa_процедуры"].Clear();
+                myDataAdapter.Fill(myDataSet, "spa_процедуры");
+                s = null;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                obj_connect = null;
+            }
+
+            checkedListBox1.ClearSelected();
+
         }
 
-       
+
 
         private void button15_Click(object sender, EventArgs e)
         {
-          checkedListBox1.ClearSelected();
-          checkedListBox1.Height = 100;
+            checkedListBox1.ClearSelected();
+            checkedListBox1.Height = 100;
         }
 
         private void button15_MouseClick(object sender, MouseEventArgs e)
         {
-          
+
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -382,68 +416,53 @@ namespace SPA
 
         private void tabPage4_Click(object sender, EventArgs e)
         {
-         
+
         }
 
         private void tabControl1_Click(object sender, EventArgs e)
         {
-         
+
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-         
+
         }
 
         private void checkedListBox1_Click(object sender, EventArgs e)
         {
-          checkedListBox1.Height = 100;
+            checkedListBox1.Height = 100;
         }
 
         private void checkedListBox1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-          //checkedListBox1.Height = 20;
+            //checkedListBox1.Height = 20;
         }
 
         private void checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-          
-          list.Add(" <" + checkedListBox1.Text + "> ");
-          list.Remove(" <> ");
+
+            list.Add(" <" + checkedListBox1.Text + "> ");
+            list.Remove(" <> ");
         }
 
-    
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-          this.Close();
-        }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-          this.Close();
-        }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-          this.Close();
-        }
 
-        private void button13_Click(object sender, EventArgs e)
-        {
-          this.Close();
-        }
+
+
 
         private void button18_Click(object sender, EventArgs e)
         {
             checkedListBox1.ClearSelected();
             checkedListBox1.Height = 20;
-            int i=0;
+            int i = 0;
             for (i = 0; i < checkedListBox1.Items.Count; i++)
-                {
-                    checkedListBox1.SetItemChecked(i, false);
-                }
-           
+            {
+                checkedListBox1.SetItemChecked(i, false);
+            }
+
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -468,6 +487,16 @@ namespace SPA
                 MessageBox.Show(ex.Message);
                 obj_connect = null;
             }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

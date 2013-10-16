@@ -127,6 +127,9 @@
   <data name="home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="beatyf2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\beatyf2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="start_here" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\start_here.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,11 +139,11 @@
   <data name="1378330727_arrows_up_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1378330727_arrows_up_down.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="record" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\record.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Update" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Update.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1380131276_MB__book" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1380131276_MB__book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add-110" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add-110.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -156,6 +159,9 @@
   </data>
   <data name="1378169739_user-card_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1378169739_user-card_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1380158582_MB__navigation112" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1380158582_MB__navigation112.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Del1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Del1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,8 +181,8 @@
   <data name="1378168836_add-group" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1378168836_add-group.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1380158582_MB__navigation111" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1380158582_MB__navigation111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1380125705_Clock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1380125705_Clock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1378177593_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1378177593_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,9 +199,6 @@
   <data name="Rew-arrows" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rew-arrows.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1380125705_Clock1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1380125705_Clock1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="right" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -211,17 +214,20 @@
   <data name="Update1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Update1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1380125705_Clock" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1380125705_Clock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1380125705_Clock1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1380125705_Clock1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Rew-arrows1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rew-arrows1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="record1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\record1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1378169655_Magnifier" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1378169655_Magnifier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="record1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\record1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1380131276_MB__book" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1380131276_MB__book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1380158582_MB__navigation11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1380158582_MB__navigation11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -231,9 +237,6 @@
   </data>
   <data name="1378224075_description" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1378224075_description.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1378168748_edit-notes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1378168748_edit-notes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1378149904_cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1378149904_cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,16 +259,16 @@
   <data name="left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="record" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\record.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1378168748_edit-notes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1378168748_edit-notes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="beatyf2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\beatyf2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1380158582_MB__navigation111" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1380158582_MB__navigation111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Personal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Personal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1380158582_MB__navigation112" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1380158582_MB__navigation112.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1381700109_Personal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1381700109_Personal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

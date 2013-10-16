@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SPA.exe" size="963072">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SPA.exe" size="943616">
       <assemblyIdentity name="SPA" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Prd4RdhaTAhHgX4IkkLt0qbrI1M=</dsig:DigestValue>
+        <dsig:DigestValue>z1Liv04CeDCemi0UsMrqESD5NDU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,13 +62,13 @@
       <dsig:DigestValue>i6y+3nUnlEeSxMa3cMu7wndd2OI=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="spa.mdb" size="778240" writeableType="applicationData">
+  <file name="spa.mdb" size="937984" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>oPxtG27TIb+NqkXvnQDQq+ApFfE=</dsig:DigestValue>
+      <dsig:DigestValue>IOI5gAeb7i/lx5j0H425grHILTc=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
