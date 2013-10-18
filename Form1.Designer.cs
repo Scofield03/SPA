@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
             this.button19 = new System.Windows.Forms.Button();
@@ -123,7 +124,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.button2 = new System.Windows.Forms.Button();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -157,10 +158,12 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1239, 840);
             this.tabControl1.TabIndex = 27;
+            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.radioButton4);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.button20);
             this.tabPage1.Controls.Add(this.label24);
@@ -201,6 +204,22 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Персонал";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Location = new System.Drawing.Point(3, 231);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(433, 23);
+            this.button2.TabIndex = 59;
+            this.button2.Text = "Поиск свободного времени";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button2_KeyDown);
             // 
             // button20
             // 
@@ -387,6 +406,7 @@
             // comboBox11
             // 
             this.comboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox11.Enabled = false;
             this.comboBox11.FormattingEnabled = true;
             this.comboBox11.Items.AddRange(new object[] {
             "00",
@@ -411,6 +431,7 @@
             // comboBox12
             // 
             this.comboBox12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox12.Enabled = false;
             this.comboBox12.FormattingEnabled = true;
             this.comboBox12.Items.AddRange(new object[] {
             "00",
@@ -750,6 +771,7 @@
             this.comboBox7.Size = new System.Drawing.Size(130, 28);
             this.comboBox7.TabIndex = 80;
             this.comboBox7.Visible = false;
+            this.comboBox7.SelectedIndexChanged += new System.EventHandler(this.comboBox7_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -772,6 +794,7 @@
             this.comboBox5.Size = new System.Drawing.Size(138, 28);
             this.comboBox5.TabIndex = 78;
             this.comboBox5.Visible = false;
+            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -1075,6 +1098,8 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Журнал";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            this.tabPage3.Enter += new System.EventHandler(this.tabPage3_Enter);
             // 
             // button7
             // 
@@ -1306,23 +1331,25 @@
             this.trackBar1.Location = new System.Drawing.Point(810, 2);
             this.trackBar1.Maximum = 100;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(132, 42);
+            this.trackBar1.Size = new System.Drawing.Size(132, 45);
             this.trackBar1.TabIndex = 29;
             this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.None;
             this.toolTip1.SetToolTip(this.trackBar1, "регулирует прозрачность окна");
             this.trackBar1.Value = 100;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
-            // button2
+            // radioButton4
             // 
-            this.button2.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button2.Location = new System.Drawing.Point(3, 231);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(433, 23);
-            this.button2.TabIndex = 59;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(3, 203);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(168, 22);
+            this.radioButton4.TabIndex = 101;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Клиент  имеет полис";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.Visible = false;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // Form1
             // 
@@ -1459,11 +1486,12 @@
     private System.Windows.Forms.Label label28;
     private System.Windows.Forms.ComboBox comboBox9;
     private System.Windows.Forms.ComboBox comboBox10;
-    private System.Windows.Forms.ComboBox comboBox11;
     private System.Windows.Forms.ComboBox comboBox12;
     private System.Windows.Forms.Label label29;
     private System.Windows.Forms.Label label30;
     private System.Windows.Forms.Button button2;
+    private System.Windows.Forms.ComboBox comboBox11;
+    public System.Windows.Forms.RadioButton radioButton4;
 
 
   }
