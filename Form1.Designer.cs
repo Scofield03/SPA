@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.button2 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
@@ -124,7 +125,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -141,6 +142,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -163,14 +165,13 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
-            this.tabPage1.Controls.Add(this.radioButton4);
+            this.tabPage1.Controls.Add(this.groupBox5);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.button20);
             this.tabPage1.Controls.Add(this.label24);
             this.tabPage1.Controls.Add(this.button19);
             this.tabPage1.Controls.Add(this.label25);
             this.tabPage1.Controls.Add(this.label26);
-            this.tabPage1.Controls.Add(this.radioButton3);
             this.tabPage1.Controls.Add(this.label27);
             this.tabPage1.Controls.Add(this.label28);
             this.tabPage1.Controls.Add(this.button10);
@@ -204,6 +205,19 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Персонал";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(7, 47);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(168, 22);
+            this.radioButton4.TabIndex = 101;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Клиент  имеет полис";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.Visible = false;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // button2
             // 
@@ -285,7 +299,7 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(2, 182);
+            this.radioButton3.Location = new System.Drawing.Point(8, 24);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(192, 22);
             this.radioButton3.TabIndex = 85;
@@ -1338,18 +1352,16 @@
             this.trackBar1.Value = 100;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
-            // radioButton4
+            // groupBox5
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(3, 203);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(168, 22);
-            this.radioButton4.TabIndex = 101;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Клиент  имеет полис";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            this.radioButton4.Visible = false;
-            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            this.groupBox5.Controls.Add(this.radioButton3);
+            this.groupBox5.Controls.Add(this.radioButton4);
+            this.groupBox5.Location = new System.Drawing.Point(3, 157);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(200, 80);
+            this.groupBox5.TabIndex = 102;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Visible = false;
             // 
             // Form1
             // 
@@ -1390,6 +1402,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1492,6 +1506,7 @@
     private System.Windows.Forms.Button button2;
     private System.Windows.Forms.ComboBox comboBox11;
     public System.Windows.Forms.RadioButton radioButton4;
+    private System.Windows.Forms.GroupBox groupBox5;
 
 
   }

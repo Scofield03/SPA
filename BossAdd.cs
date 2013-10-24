@@ -45,14 +45,14 @@ namespace SPA
 
                 myDataAdapter.InsertCommand.Connection.Open();
                 myDataAdapter.InsertCommand.ExecuteNonQuery();
-                MessageBox.Show(myDataAdapter.InsertCommand.CommandText);
+                
                 myDataAdapter.InsertCommand.Connection.Close();
 
                 myDataAdapter.SelectCommand = new OleDbCommand("Select * FROM Персонал", myOleDbConnection);
                 myDataAdapter.SelectCommand.Connection.Open();
                 myDataAdapter.SelectCommand.ExecuteNonQuery();
                 myDataAdapter.SelectCommand.Connection.Close();
-
+                MessageBox.Show("Новый сотрудник назначен");
                 myDataSet.Tables["Персонал"].Clear();
                 myDataAdapter.Fill(myDataSet, "Персонал");
             }
@@ -210,6 +210,7 @@ namespace SPA
 
                 myDataSet.Tables["Персонал"].Clear();
                 myDataAdapter.Fill(myDataSet, "Персонал");
+                MessageBox.Show("сотрудник освобожден от занимаеой должности и удален из базы");
             }
             catch (Exception ex)
             {
@@ -226,7 +227,7 @@ namespace SPA
             {
                 myDataAdapter.DeleteCommand.Connection.Open();
                 myDataAdapter.DeleteCommand.ExecuteNonQuery();
-                MessageBox.Show(myDataAdapter.DeleteCommand.CommandText);
+               
                 myDataAdapter.DeleteCommand.Connection.Close();
 
                 myDataAdapter.SelectCommand = new OleDbCommand("Select * FROM Специальности", myOleDbConnection);
@@ -495,6 +496,11 @@ namespace SPA
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
